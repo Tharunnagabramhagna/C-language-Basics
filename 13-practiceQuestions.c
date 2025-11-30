@@ -43,21 +43,36 @@ void main()
 
     // 5) Write a C program to find the root of a quadratic equation.
     // Ans)
-    int a, b, c;
-    float root1, root2, discriminant;
-
-    printf("Enter values of a, b and c: ");
-    scanf("%d %d %d", &a, &b, &c);
-
-    discriminant = (b * b) - (4 * a * c);
-
-    root1 = (-b + sqrt(discriminant)) / (2 * a);
-    root2 = (-b - sqrt(discriminant)) / (2 * a);
-
-    printf("Root1 = %.2f\n", root1);
-    printf("Root2 = %.2f\n", root2);
-    // // ex:- a = 1, b = -3, c = 2 //
-    // Enter only if discriminant >= 0
+    int a,b,c;
+    float discri,realPart,imgPart;
+    
+    // Input
+    printf("Enter a,b and c values : ");
+    scanf("%d%d%d",&a,&b,&c);
+    
+    discri = (b*b) - (4*a*c);
+    
+    // output
+    if(discri > 0) {
+        float root1 = (-b + sqrt(discri)) / (2*a);
+        float root2 = (-b - sqrt(discri)) / (2*a);
+        
+        printf("Roots are real and different\n");
+        printf("Root1 = %.2f\n",root1);
+        printf("Root2 = %.2f\n",root2);
+    } else if (discri == 0) {
+        float root = -b / (2*a);
+        
+        printf("Roots are real and equal\n");
+        printf("Root = %.2f\n",root);
+    } else {
+        realPart = -b / (2*a);
+        imgPart = (sqrt(-discri)) / (2*a);
+        
+        printf("Roots are complex and imaginary\n");
+        printf("Root1 = %.2f + %.2fi\n",realPart,imgPart);
+        printf("Root2 = %.2f - %.2fi\n",realPart,imgPart);
+    } 
 
     // 6) Write a C program to show pyramid stars table.
     // Ans)
