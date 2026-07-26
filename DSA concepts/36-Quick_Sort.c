@@ -40,12 +40,12 @@ void display(int arr[], int n) {
 int main() {
     int n = 9;
     int arr[9] = {7,6,10,5,9,2,1,15,7};
-    printf("Before Sorting : \n");
+    printf("Before Sorting the array : \n");
     display(arr,n);
     
     QuickSort(arr,0,n-1);
     
-    printf("After Sorting : \n");
+    printf("After Sorting the array : \n");
     display(arr,n);
     
     return 0;
