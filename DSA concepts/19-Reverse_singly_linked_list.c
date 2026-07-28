@@ -52,9 +52,7 @@ struct Node* reverse_list(struct Node* head) {
         printf("List is Empty.\n");
         return head;
     }
-    struct Node* prev = NULL;
-    struct Node* curr = head;
-    struct Node* next = NULL;
+    struct Node* prev = NULL,* curr = head,* next = NULL;
     while(curr != NULL) {
         next = curr->next;
         curr->next = prev;
