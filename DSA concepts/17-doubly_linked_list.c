@@ -374,7 +374,7 @@ int main() {
             return 0;
 
         default:
-            printf("Invalid choice\n");
+            printf("Invalid choice.\n");
         }
     }
 }
