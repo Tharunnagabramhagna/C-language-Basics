@@ -39,9 +39,8 @@ struct Node* Reverse_list(struct Node* head) {
         printf("List is Empty.\n");
         return NULL;
     }
-    struct Node* curr = head;
-    struct Node* next = NULL;
-    struct Node* new_head = NULL;
+    struct Node* curr = head,* next = NULL,* new_head = NULL;
+
     while(curr != NULL) {
         next = curr->next;
         curr->next = curr->prev;
@@ -49,8 +48,8 @@ struct Node* Reverse_list(struct Node* head) {
         new_head = curr;
         curr = next;
     }
-    // head = curr;
-    return new_head;
+
+    return new_head; // head = curr
 }
 
 void display(struct Node* head) {
@@ -70,5 +69,6 @@ int main() {
     display(head);
     head = Reverse_list(head);
     display(head);
+    
     return 0;
 }
