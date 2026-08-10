@@ -210,9 +210,7 @@ void printNumbers(int arr[], int n);
 void printNumbers(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
-    {
         printf("%d \t", arr[i]);
-    }
     printf("\n");
 }
 // we can replace arr[] with *arr which gives same output
@@ -266,7 +264,5 @@ int main()
 void storeTable(int arr[][10], int m, int n, int number)
 {
     for (int i = 0; i < n; i++)
-    {
         arr[m][i] = number * (i + 1);
-    }
 }
