@@ -18,18 +18,14 @@ void main()
 
     printf("EVEN NUMBERS FROM 1 TO 10..\n");
     for (int i = 0; i < 5; i++)
-    {
         printf("%d\n", ptr[i]);
-    }
 
     // 2) calloc()
     float *cptr;
     cptr = (float *)calloc(5, sizeof(float));
     printf("PRINTING NULL VALUES..\n");
     for (int i = 0; i < 5; i++)
-    {
         printf("%f\n", cptr[i]);
-    }
     /* Here,malloc may return garbage values if we provide no data
     but calloc always return NULL values if we provide no data. */
 
@@ -40,9 +36,7 @@ void main()
     cptr[0] = 10;
     cptr[1] = 20;
     for (int i = 0; i < 2; i++)
-    {
         printf("%.2f\n", cptr[i]);
-    }
 
     // Practice Questions //
     /* 1) Write a program to allocate memory to store 5 prices.*/
@@ -57,9 +51,7 @@ void main()
     ptrPrice[4] = 56.98;
 
     for (int i = 0; i < 5; i++)
-    {
         printf("Price[%d] = %.2f\n", i, ptrPrice[i]);
-    }
 
     /* 2) Write a program to allocate memory of size n,
     where n is entered by the user. */
@@ -72,9 +64,7 @@ void main()
     cptr1 = (int *)calloc(5, sizeof(int));
 
     for (int i = 0; i < n; i++)
-    {
         printf("%d\n", cptr1[i]);
-    }
 
     /* 3) Allocate memory for 5 numbers.Then dynamically
     increase it to 8 numbers. */
@@ -85,24 +75,18 @@ void main()
 
     printf("Enter five numbers : ");
     for (int i = 0; i < 5; i++)
-    {
         scanf("%d", &ptrn[i]);
-    }
 
     printf("\nAFTER REALLOCATING..\n");
     ptrn = (int *)realloc(ptrn, 8);
     printf("Enter eight numbers : ");
     for (int i = 0; i < 8; i++)
-    {
         scanf("%d", &ptrn[i]);
-    }
 
     // output
     printf("PRINTING 8 NUMBERS :\n");
     for (int i = 0; i < 8; i++)
-    {
         printf("number[%d] = %d\n", i, ptrn[i]);
-    }
 
     /* 4) Create an array of size 5(using calloc) and enter
     it's values from the user. */
@@ -113,15 +97,11 @@ void main()
     // input
     printf("Enter numbers (5) : ");
     for (int i = 0; i < 5; i++)
-    {
         scanf("%d", &ptra[i]);
-    }
 
     // output
     for (int i = 0; i < 5; i++)
-    {
         printf("Number %d is %d\n", i, ptra[i]);
-    }
 
     /* 5) Allocate memory to store first 5 odd numbers,then
     reallocate it to store first 6 even number. */
@@ -140,9 +120,7 @@ void main()
     printf("\nTHE FINAL DATA :\n");
     printf("Numbers = ");
     for (int i = 0; i < 5; i++)
-    {
         printf("%d\t", ptrOdd[i]);
-    }
 
     // reallocting
     ptrOdd = (int *)realloc(ptrOdd, 6);
@@ -157,8 +135,7 @@ void main()
 
     // output - 2)
     for (int i = 0; i < 6; i++)
-    {
         printf("%d\t", ptrOdd[i]);
-    }
+    
     free(ptrOdd);
 }
