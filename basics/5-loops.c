@@ -101,9 +101,8 @@ int main()
     scanf("%d", &userInput);
 
     for (int d = 1; d <= userInput; d++)
-    {
         sum += d;
-    }
+    
     printf("Sum = %d\n", sum);
     // // b)
     int sum1 = 0;
