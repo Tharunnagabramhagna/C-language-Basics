@@ -4,8 +4,10 @@
 int main()
 {
 	int size,i,num,pos;
+
 	printf("Enter the size of array = ");
 	scanf("%d",&size);
+
 	int a[size];
 	// input a
 	for(i = 0; i < size; i++)
@@ -26,6 +28,7 @@ int main()
 		a[i] = a[i-1];
 	a[pos - 1] = num;
 	size++;
+
 	// output
 	printf("Displaying array elements : ");
 	for(i = 0; i < size; i++)
