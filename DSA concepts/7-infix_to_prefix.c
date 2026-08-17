@@ -54,9 +54,9 @@ void infixToPostfix(char infix[], char postfix[]) {
 
 	for (i = 0; i < strlen(infix); i++) {
 		symbol = infix[i];
-		if (isalnum(symbol)) {
+		if (isalnum(symbol))
 			postfix[j++] = symbol;
-		} else {
+		else {
 			switch (symbol) {
 			case '(':
 				push(&s, symbol);
