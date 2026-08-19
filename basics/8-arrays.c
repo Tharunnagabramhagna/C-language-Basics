@@ -253,9 +253,8 @@ int main()
     printf("\n");
 
     for (int i = 0; i < 10; i++)
-    {
         printf("%d\t", table[1][i]);
-    }
+
     printf("\n");
 
     return 0;
