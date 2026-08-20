@@ -68,9 +68,7 @@ int main()
 
     // 4) Write a program to print the average of 3 numbers ?
     // Ans)
-    int val2 = 5;
-    int val3 = 3;
-    int val4 = 10;
+    int val2 = 5,val3 = 3,val4 = 10;
     printf("\nCALCULATING THE AVERAGE OF 3 NUMBERS");
     printf("\nAverage = %d\n", (val2 + val3 + val4) / 3);
 
